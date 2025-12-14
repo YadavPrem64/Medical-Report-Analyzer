@@ -1,0 +1,50 @@
+# Core Dependencies
+python>=3.8
+
+# Deep Learning & NLP
+torch>=2.0.0
+transformers>=4.30.0
+spacy>=3.5.0
+sentencepiece>=0.1.99
+
+# OCR & PDF Processing
+easyocr>=1.7.0
+pytesseract>=0.3.10
+PyPDF2>=3.0.0
+pdf2image>=1.16.3
+Pillow>=10.0.0
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+
+# Visualization
+matplotlib>=3.7.0
+plotly>=5.14.0
+seaborn>=0.12.0
+
+# Explainable AI
+shap>=0.42.0
+lime>=0.2.0
+
+# Web Framework
+streamlit>=1.25.0
+streamlit-option-menu>=0.3.6
+
+# Utilities
+pyyaml>=6.0
+python-dotenv>=1.0.0
+tqdm>=4.65.0
+requests>=2.31.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Logging
+loguru>=0.7.0
+
+# Medical NLP specific
+scispacy>=0.5.1
+medspacy>=0.2.0
