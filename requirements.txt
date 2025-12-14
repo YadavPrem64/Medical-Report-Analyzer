@@ -1,5 +1,5 @@
 # Core Dependencies
-python>=3.8
+
 
 # Deep Learning & NLP
 torch>=2.0.0
