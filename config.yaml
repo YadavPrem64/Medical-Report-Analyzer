@@ -1,0 +1,78 @@
+# Medical Report Analyzer Configuration
+
+# Application Settings
+app:
+  name: "Medical Report Analyzer"
+  version: "1.0.0"
+  debug: true
+
+# Model Settings
+models:
+  ner_model: "dmis-lab/biobert-base-cased-v1.1"
+  classification_model: "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract"
+  max_length: 512
+  batch_size: 16
+
+# OCR Settings
+ocr:
+  engine: "easyocr"
+  languages: ['en']
+  gpu: false
+  confidence_threshold: 0.5
+
+# Anomaly Detection
+anomaly_detection:
+  method: "rule_based"
+  sensitivity: "medium"
+
+# Normal Ranges (for blood tests)
+normal_ranges:
+  Hemoglobin:
+    male: [13.5, 17.5]
+    female: [12.0, 15.5]
+    unit: "g/dL"
+  
+  WBC:
+    range: [4.5, 11.0]
+    unit: "10^3/μL"
+  
+  RBC:
+    male: [4.5, 5.9]
+    female: [4.0, 5.2]
+    unit: "10^6/μL"
+  
+  Platelets:
+    range: [150, 400]
+    unit: "10^3/μL"
+  
+  Glucose:
+    fasting: [70, 100]
+    random: [70, 140]
+    unit: "mg/dL"
+  
+  Cholesterol:
+    total: [0, 200]
+    ldl: [0, 100]
+    hdl: [40, 1000]
+    unit: "mg/dL"
+
+# Paths
+paths:
+  data_dir: "data/"
+  raw_data: "data/raw/"
+  processed_data: "data/processed/"
+  models_dir: "models/saved_models/"
+  logs_dir: "logs/"
+
+# Streamlit Settings
+streamlit:
+  page_title: "Medical Report Analyzer"
+  page_icon: "🏥"
+  layout: "wide"
+  theme: "light"
+
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/app.log"
